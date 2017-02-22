@@ -22,7 +22,8 @@ public class GridAdapter extends BaseAdapter {
             "Campus life",
             "Clubs",
             "Placements",
-            "Academics"
+            "Academics",
+            "Staff"
     };
 
     private  int[] Imageid={
@@ -30,7 +31,8 @@ public class GridAdapter extends BaseAdapter {
             R.drawable.gallery,
             R.drawable.club,
             R.drawable.place,
-            R.drawable.rules
+            R.drawable.rules,
+            R.drawable.tea
 
 
 
