@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 /**
@@ -71,7 +73,8 @@ public class GridAdapter extends BaseAdapter {
         ImageView imageView = (ImageView)v.findViewById(R.id.iv);
         TextView textView=(TextView)v.findViewById(R.id.tv);
         textView.setText(text[i]);
-        imageView.setImageResource(Imageid[i]);
+        Glide.with(mContext).load(Imageid[i]).into(imageView);
+       // imageView.setImageResource(Imageid[i]);
 
         return v;
     }

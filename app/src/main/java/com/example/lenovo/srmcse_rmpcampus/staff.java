@@ -17,9 +17,10 @@ public class staff extends AppCompatActivity {
         RecyclerView rv=(RecyclerView) findViewById(R.id.rv);
         rv.setHasFixedSize(false);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        list.add(new Teacher("Vijay","CSE",null,"HOD","AI"));
-        list.add(new Teacher("Chirag","CSE",null,"Dean","AI"));
-        list.add(new Teacher("Mrudula","CSE","http://www.srmuniv.ac.in/sites/ramapuram/files/images/mrs_mrudula_oruganti.jpg","Chairman","Android"));
+        list.add(new Teacher("Dr.J.Jagadeesan","Ph.D","http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/it_jagadeesan_j.jpg","Professor","CSE"));
+
+        list.add(new Teacher("Mr.R.Augustian Isaac","M.E","http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/augustian.jpg","A.P(Sr.G)","CSE"));
+        list.add(new Teacher("Mrs .Mrudula Oruganti","M.Tech","http://www.srmuniv.ac.in/sites/ramapuram/files/images/mrs_mrudula_oruganti.jpg","A.P(O.G)","CSE"));
         StaffAdapter s=new StaffAdapter(list,staff.this);
         rv.setAdapter(s);
 

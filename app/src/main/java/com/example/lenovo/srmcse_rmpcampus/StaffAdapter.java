@@ -40,8 +40,8 @@ ArrayList<Teacher> list;
         holder.tv3.setText("Designation: "+t.getDes());
         holder.tv4.setText("Specialisation: "+t.getSpe());
         if (t.getPhoto()!=null)
-            Glide.with(mContext).load(t.getPhoto()).into(holder.iv);
-        else holder.iv.setImageResource(R.drawable.ic_teacher);
+            Glide.with(mContext).load(t.getPhoto()).placeholder(R.drawable.ic_blackboard).into(holder.iv);
+        else holder.iv.setImageResource(R.drawable.ic_blackboard);
 
 
     }

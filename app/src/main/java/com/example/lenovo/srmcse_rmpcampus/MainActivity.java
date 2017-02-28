@@ -25,6 +25,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import static android.text.Html.fromHtml;
 
 public class MainActivity extends AppCompatActivity
@@ -118,7 +120,8 @@ public class MainActivity extends AppCompatActivity
 
             View view = layoutInflater.inflate(R.layout.layouts, container, false);
             ImageView iv = (ImageView)view.findViewById(R.id.iv);
-            iv.setImageResource(Imageid[position]);
+            Glide.with(MainActivity.this).load(Imageid[position]).into(iv);
+            //iv.setImageResource(Imageid[position]);
             container.addView(view);
 
             return view;
