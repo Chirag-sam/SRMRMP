@@ -1,5 +1,6 @@
 package com.example.lenovo.srmcse_rmpcampus;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,12 +16,16 @@ public class StaffHolder extends RecyclerView.ViewHolder {
     ImageView iv;
     TextView tv3;
     TextView tv4;
+    CardView cv;
     public StaffHolder(View itemView) {
         super(itemView);
+        cv=(CardView)itemView.findViewById(R.id.cv);
         tv = (TextView)itemView.findViewById(R.id.tv);
         tv2= (TextView)itemView.findViewById(R.id.tv2);
         iv = (ImageView)itemView.findViewById(R.id.iv);
         tv3= (TextView)itemView.findViewById(R.id.tv3);
         tv4= (TextView)itemView.findViewById(R.id.tv4);
     }
+
+
 }

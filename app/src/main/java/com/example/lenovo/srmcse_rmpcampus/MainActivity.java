@@ -92,6 +92,8 @@ public class MainActivity extends AppCompatActivity
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i==0)
+                    startActivity(new Intent(MainActivity.this,OurDepartment.class));
                 if (i==5)
                     startActivity(new Intent(MainActivity.this,staff.class));
             }

@@ -1,6 +1,9 @@
 package com.example.lenovo.srmcse_rmpcampus;
 
 import android.content.Context;
+import android.net.Uri;
+import android.support.customtabs.CustomTabsIntent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +37,7 @@ ArrayList<Teacher> list;
 
     @Override
     public void onBindViewHolder(StaffHolder holder, int position) {
-        Teacher t=list.get(position);
+        final Teacher t=list.get(position);
         holder.tv.setText(t.getName());
         holder.tv2.setText("Qualifications: "+t.getQualifications());
         holder.tv3.setText("Designation: "+t.getDes());
@@ -42,6 +45,16 @@ ArrayList<Teacher> list;
         if (t.getPhoto()!=null)
             Glide.with(mContext).load(t.getPhoto()).placeholder(R.drawable.ic_blackboard).into(holder.iv);
         else holder.iv.setImageResource(R.drawable.ic_blackboard);
+        holder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CustomTabsIntent.Builder builder=new CustomTabsIntent.Builder();
+                builder.setToolbarColor(ContextCompat.getColor(mContext,R.color.colorPrimary));
+                CustomTabsIntent customTabsIntent=builder.build();
+                if (t.getLink()!=null)
+                customTabsIntent.launchUrl(mContext, Uri.parse(t.getLink()));
+            }
+        });
 
 
     }

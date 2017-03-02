@@ -20,7 +20,6 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:layout_alignBottom="@id/view_pager"
-
         android:orientation="horizontal">
     </LinearLayout>
 

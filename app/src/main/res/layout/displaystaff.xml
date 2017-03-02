@@ -21,7 +21,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/iv"
-        android:scaleType="fitXY"
         android:layout_marginRight="20dp"
         android:layout_alignTop="@+id/tv"
         android:layout_alignBottom="@+id/tv4"

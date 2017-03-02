@@ -10,7 +10,7 @@ public class Teacher {
     String photo;
     String des;
     String spe;
-
+    String link;
 
     public Teacher(String name, String qualifications, String photo, String des, String spe) {
         this.name = name;
@@ -18,6 +18,23 @@ public class Teacher {
         this.photo = photo;
         this.des = des;
         this.spe = spe;
+    }
+
+    public Teacher(String name, String qualifications, String photo, String des, String spe, String link) {
+        this.name = name;
+        this.qualifications = qualifications;
+        this.photo = photo;
+        this.des = des;
+        this.spe = spe;
+        this.link = link;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getDes() {
