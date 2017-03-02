@@ -9,7 +9,7 @@ import android.widget.TextView;
 /**
  * Created by lenovo on 2/22/2017.
  */
-
+// app:srcCompat="@drawable/cse_hd"
 public class StaffHolder extends RecyclerView.ViewHolder {
     TextView tv;
     TextView tv2;

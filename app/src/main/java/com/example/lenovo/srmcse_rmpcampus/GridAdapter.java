@@ -70,6 +70,7 @@ public class GridAdapter extends BaseAdapter {
         } else {
             v =  convertView;
         }
+
         ImageView imageView = (ImageView)v.findViewById(R.id.iv);
         TextView textView=(TextView)v.findViewById(R.id.tv);
         textView.setText(text[i]);
