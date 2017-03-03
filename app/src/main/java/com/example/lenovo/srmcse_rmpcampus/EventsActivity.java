@@ -23,6 +23,7 @@ public class EventsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clubs);
+        ButterKnife.bind(this);
         recycler.setHasFixedSize(false);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         list.add(new Club("http://imgur.com/a/HglkQ","Chipset","Chipset zkxjcbkzxjcbkzxncbxckasjdkjaskjshdkjshd","https://www.ted.com/tedx/events/9536"));
