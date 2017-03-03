@@ -77,6 +77,7 @@ public class GridAdapter extends BaseAdapter {
         Glide.with(mContext).load(Imageid[i]).into(imageView);
        // imageView.setImageResource(Imageid[i]);
 
+
         return v;
     }
 }
