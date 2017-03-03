@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ClubsActivity extends AppCompatActivity {
+public class EventsActivity extends AppCompatActivity {
 
     @BindView(R.id.recycler)
     RecyclerView recycler;
@@ -19,16 +19,15 @@ public class ClubsActivity extends AppCompatActivity {
     RelativeLayout activityClubs;
     ArrayList<Club> list = new ArrayList<>();
     ClubAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clubs);
-        ButterKnife.bind(this);
         recycler.setHasFixedSize(false);
         recycler.setLayoutManager(new LinearLayoutManager(this));
-        list.add(new Club("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/tedx15_img6.jpg","TED-X","TED Talks, is a global initiative about ideas worth spreading via TEDx","https://www.ted.com/tedx/events/9536"));
-        adapter=new ClubAdapter(list,ClubsActivity.this);
+        list.add(new Club("http://imgur.com/a/HglkQ","Chipset","Chipset zkxjcbkzxjcbkzxncbxckasjdkjaskjshdkjshd","https://www.ted.com/tedx/events/9536"));
+        adapter=new ClubAdapter(list,EventsActivity.this,true);
         recycler.setAdapter(adapter);
+        ButterKnife.bind(this);
     }
 }

@@ -94,8 +94,13 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==0)
                     startActivity(new Intent(MainActivity.this,OurDepartment.class));
-                if (i==5)
+                else if (i==2)
+                    startActivity(new Intent(MainActivity.this,ClubsActivity.class));
+
+               else if (i==5)
                     startActivity(new Intent(MainActivity.this,staff.class));
+                else if (i==6)
+                    startActivity(new Intent(MainActivity.this,EventsActivity.class));
             }
 
 

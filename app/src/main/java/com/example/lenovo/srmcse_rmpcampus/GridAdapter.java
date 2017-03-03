@@ -25,7 +25,8 @@ public class GridAdapter extends BaseAdapter {
             "Clubs",
             "Placements",
             "Academics",
-            "Staff"
+            "Staff",
+            "Events"
     };
 
     private  int[] Imageid={
@@ -34,8 +35,8 @@ public class GridAdapter extends BaseAdapter {
             R.drawable.club,
             R.drawable.place,
             R.drawable.rules,
-            R.drawable.tea
-
+            R.drawable.tea,
+            R.drawable.club
 
 
     };
@@ -43,6 +44,14 @@ public class GridAdapter extends BaseAdapter {
         mContext = c;
 
     }
+
+    public GridAdapter(Context mContext, ArrayList<String> cate, String[] text, int[] imageid) {
+        this.mContext = mContext;
+        this.cate = cate;
+        this.text = text;
+        Imageid = imageid;
+    }
+
     @Override
     public int getCount() {
         return text.length;

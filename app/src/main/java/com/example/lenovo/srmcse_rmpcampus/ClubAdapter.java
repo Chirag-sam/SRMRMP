@@ -26,10 +26,17 @@ import butterknife.ButterKnife;
 public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ClubHolder> {
     ArrayList<Club> list;
     Context mContext;
+    Boolean a=false;
 
     public ClubAdapter(ArrayList<Club> list, Context mContext) {
         this.list = list;
         this.mContext = mContext;
+    }
+
+    public ClubAdapter(ArrayList<Club> list, Context mContext, Boolean a) {
+        this.list = list;
+        this.mContext = mContext;
+        this.a = a;
     }
 
     @Override
@@ -50,11 +57,12 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ClubHolder> {
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (!a){
                 CustomTabsIntent.Builder builder=new CustomTabsIntent.Builder();
                 builder.setToolbarColor(ContextCompat.getColor(mContext,R.color.colorPrimary));
                 CustomTabsIntent customTabsIntent=builder.build();
                 if (c.getLink()!=null)
-                    customTabsIntent.launchUrl(mContext, Uri.parse(c.getLink()));
+                    customTabsIntent.launchUrl(mContext, Uri.parse(c.getLink()));}
             }
         });
     }
