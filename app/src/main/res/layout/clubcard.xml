@@ -44,7 +44,6 @@
             android:text="Description:kjsdfkjdshfjkhdskfjhdskjfhsdkjfhdskjfhjkdsfhskjdfhskdjfhksdjfhdskjfhsdjkfhsdkjfskdjfhksjdfhkjsdfh"
             android:textSize="16dp"
             android:minLines="3"
-            android:maxLines="3"
             android:padding="8dp"
 
             android:id="@+id/tv2"/>

@@ -3,9 +3,7 @@ package com.example.lenovo.srmcse_rmpcampus;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
+import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -27,6 +25,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import static android.text.Html.fromHtml;
 
 public class MainActivity extends AppCompatActivity
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
+    private String text[]={"Sample Text1","Sample Text2","Sample Text3","Sample Text4","Sample Text5"};
+    int currentPage = 0;
+    Timer timer;
     private  int[] Imageid={
             R.drawable.dept,
             R.drawable.gallery,
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
 
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
@@ -83,7 +87,24 @@ public class MainActivity extends AppCompatActivity
             }
         };
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == Imageid.length) {
+                    currentPage = 0;
+                }
+                viewPager.setCurrentItem(currentPage++, true);
+            }
+        };
 
+        Timer timer = new Timer(); // This will create a new Thread
+        timer .schedule(new TimerTask() { // task to be scheduled
+
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 500, 1500);
 
 
         GridView gv=(GridView)findViewById(R.id.gridview);
@@ -94,13 +115,13 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==0)
                     startActivity(new Intent(MainActivity.this,OurDepartment.class));
-                else if (i==2)
+                else if (i==1)
                     startActivity(new Intent(MainActivity.this,ClubsActivity.class));
 
                else if (i==5)
                     startActivity(new Intent(MainActivity.this,staff.class));
-                else if (i==6)
-                    startActivity(new Intent(MainActivity.this,EventsActivity.class));
+                else if (i==2)
+                    startActivity(new Intent(MainActivity.this,WorkShopActivity.class));
             }
 
 
@@ -126,8 +147,10 @@ public class MainActivity extends AppCompatActivity
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             View view = layoutInflater.inflate(R.layout.layouts, container, false);
+            TextView tv = (TextView) view.findViewById(R.id.txt);
             ImageView iv = (ImageView)view.findViewById(R.id.iv);
             Glide.with(MainActivity.this).load(Imageid[position]).into(iv);
+            tv.setText(text[position]);
             //iv.setImageResource(Imageid[position]);
             container.addView(view);
 

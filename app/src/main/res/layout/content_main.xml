@@ -17,7 +17,8 @@
     <LinearLayout
         android:id="@+id/layoutDots"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:layout_alignBottom="@id/view_pager"
         android:orientation="horizontal">

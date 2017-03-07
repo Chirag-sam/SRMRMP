@@ -21,22 +21,22 @@ public class GridAdapter extends BaseAdapter {
     private ArrayList<String> cate;
     private  String[] text={
             "Our Department",
-            "Campus life",
             "Clubs",
+            "Events",
             "Placements",
             "Academics",
             "Staff",
-            "Events"
+
     };
 
     private  int[] Imageid={
             R.drawable.dept,
-            R.drawable.gallery,
+            R.drawable.club,
             R.drawable.club,
             R.drawable.place,
             R.drawable.rules,
-            R.drawable.tea,
-            R.drawable.club
+            R.drawable.tea
+
 
 
     };
