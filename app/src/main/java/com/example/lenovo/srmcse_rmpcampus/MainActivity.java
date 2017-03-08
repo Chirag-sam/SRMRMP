@@ -122,6 +122,10 @@ public class MainActivity extends AppCompatActivity
                     startActivity(new Intent(MainActivity.this,staff.class));
                 else if (i==2)
                     startActivity(new Intent(MainActivity.this,WorkShopActivity.class));
+                else if (i==6)
+                {
+                    startActivity(new Intent(MainActivity.this,Achievements.class));
+                }
             }
 
 

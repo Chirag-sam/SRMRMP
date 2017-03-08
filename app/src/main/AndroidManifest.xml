@@ -25,7 +25,8 @@
             android:name=".OurDepartment"
             android:theme="@style/AppTheme" />
         <activity android:name=".ClubsActivity" />
-        <activity android:name=".WorkShopActivity"></activity>
+        <activity android:name=".WorkShopActivity" />
+        <activity android:name=".Achievements"></activity>
     </application>
 
 </manifest>
