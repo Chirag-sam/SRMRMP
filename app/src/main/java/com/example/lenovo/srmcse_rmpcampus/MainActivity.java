@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onPageSelected(int position) {
                 addBottomDots(position);
-
+                currentPage=position;
 
 
             }
