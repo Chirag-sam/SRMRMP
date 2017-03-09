@@ -3,6 +3,7 @@ package com.example.lenovo.srmcse_rmpcampus;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.ImageView;
@@ -23,6 +24,10 @@ public class OurDepartment extends AppCompatActivity {
     ImageView iv2;
     @BindView(R.id.tx3)
     DocumentView tx3;
+    @BindView(R.id.tx0)
+    DocumentView tx0;
+    @BindView(R.id.cv1)
+    CardView cv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,7 @@ public class OurDepartment extends AppCompatActivity {
         Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/about2_hd.jpg").placeholder(R.drawable.gallery).into(iv2);
         tx2.setText(fromHtml(getString(R.string.OurVision)));
         tx3.setText(fromHtml(getString(R.string.OurMission)));
+        tx0.setText(fromHtml(getString(R.string.OurDept)));
     }
 
     @SuppressWarnings("deprecation")

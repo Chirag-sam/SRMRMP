@@ -11,14 +11,47 @@
     android:paddingRight="16dp"
     android:orientation="vertical">
 
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="2dp"
 
-    <ImageView
+        android:clickable="false"
+        android:focusable="true"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/cse_hd"
-        android:id="@+id/imageView2"
-        android:scaleType="fitCenter"
-        />
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+
+        android:id="@+id/cv0">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/cse_hd"
+            android:id="@+id/imageView2"
+            android:scaleType="fitCenter"
+            />
+        <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ext:documentView_antialias="true"
+            ext:documentView_cacheConfig="auto_quality"
+            ext:documentView_textAlignment="justified"
+            ext:documentView_textFormat="formatted"
+            android:layout_below="@+id/imageView2"
+            android:id="@+id/tx0"
+            ext:documentView_insetPaddingLeft="10dp"
+            ext:documentView_insetPaddingRight="10dp"
+            />
+
+
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -26,11 +59,6 @@
         android:background="@color/colorPrimary"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:id="@+id/textView2" />
 
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -68,8 +96,8 @@
                 ext:documentView_textFormat="formatted"
                 android:layout_below="@+id/iv"
                 android:id="@+id/tx2"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
+                ext:documentView_insetPaddingLeft="10dp"
+                ext:documentView_insetPaddingRight="10dp"
                 />
 
 
@@ -112,8 +140,8 @@
                 ext:documentView_textFormat="formatted"
                 android:layout_below="@+id/iv2"
                 android:id="@+id/tx3"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
+                ext:documentView_insetPaddingLeft="10dp"
+                ext:documentView_insetPaddingRight="10dp"
                 />
 
 
