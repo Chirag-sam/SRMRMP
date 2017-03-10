@@ -36,7 +36,7 @@ public class OurDepartment extends AppCompatActivity {
         ButterKnife.bind(this);
         //TextView tv = (TextView) findViewById(R.id.textView2);
         //tv.setText(fromHtml(getString(R.string.OurDept)));
-        Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/vision_mission.jpg").into(iv);
+        Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/vision_mission.jpg").placeholder(R.drawable.dept).into(iv);
         Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/about2_hd.jpg").placeholder(R.drawable.gallery).into(iv2);
         tx2.setText(fromHtml(getString(R.string.OurVision)));
         tx3.setText(fromHtml(getString(R.string.OurMission)));

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +21,9 @@ import java.util.ArrayList;
 public class StaffAdapter extends RecyclerView.Adapter <StaffHolder>{
 ArrayList<Teacher> list;
     Context mContext;
-
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
     public StaffAdapter(ArrayList<Teacher> list, Context mContext) {
         this.list = list;
         this.mContext = mContext;
@@ -43,7 +46,7 @@ ArrayList<Teacher> list;
         holder.tv3.setText("Designation: "+t.getDes());
         holder.tv4.setText("Specialisation: "+t.getSpe());
         if (t.getPhoto()!=null)
-            Glide.with(mContext).load(t.getPhoto()).placeholder(R.drawable.ic_blackboard).into(holder.iv);
+            Glide.with(mContext).load(t.getPhoto()).placeholder(R.drawable.blackboard).into(holder.iv);
         else holder.iv.setImageResource(R.drawable.ic_blackboard);
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override

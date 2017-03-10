@@ -13,8 +13,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Achievements extends AppCompatActivity {
-    ArrayList<AchievementsAdapter.Achievement> list = new ArrayList<>();
-AchievementsAdapter adapter;
+    ArrayList<Club> list = new ArrayList<>();
+ClubAdapter adapter;
     RelativeLayout activityAchievements;
     ArrayAdapter<String> x;
     @BindView(R.id.rv)
@@ -29,8 +29,11 @@ AchievementsAdapter adapter;
         ButterKnife.bind(this);
         rv.setHasFixedSize(false);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        list.add(new AchievementsAdapter.Achievement("Dhruv Marwha","Exploit the code, coding and debugging, web development , project"," 	Aurganon 2K14, Infoyez 2K14,Tech Club" ));
-        adapter=new AchievementsAdapter(list);
+        list.add(new Club("http://i64.tinypic.com/o8gtjp.png","Achievements in sports","The Department of Computer Science and Engineering of SRM University, Ramapuram is proud to have B.Aravind and S.G.Thilak Desingh of III year who have brought laurels to the department by being part of winning under 19 Thiruvallur District and All – India YSCA trophy respectively by April 2013. Both are currently playing under Tamil Nadu Cricket Association for III Division.",null));
+        list.add(new Club("http://i68.tinypic.com/213rz1y.png","SAP Programs","In SRM University, the department of CSE makes sure that its students get global exposure through its Semester Abroad Program, students of  this department are given an opportunity to apply to some of the well known Universities of, MIT, Cornell, Casrneige Melton, University of Wisconsin etc,. The program aims at providing students a way that can help them to develop skill that will bridge the gap the eastern and western way of applying knowledge. Students are given an opportunity to finish one complete semester ion any of the universities and return back to SRM University ",null));
+        list.add(new Club("http://i68.tinypic.com/m99l48.png","Extra curricular activities","Nikhila Nyapathy, Palla Nitin Kumar Reddy, Rahul D. Pathak won the First Runner up team award by IIT – Delhi and BITS Pilani,In Strengthening the Policing Contest 2013- Ensuring Women Safety in India held by FICCI .",null));
+
+        adapter=new ClubAdapter(list,Achievements.this,true);
         rv.setAdapter(adapter);
 
     }
