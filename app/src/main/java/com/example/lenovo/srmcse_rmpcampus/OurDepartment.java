@@ -28,6 +28,10 @@ public class OurDepartment extends AppCompatActivity {
     DocumentView tx0;
     @BindView(R.id.cv1)
     CardView cv1;
+    @BindView(R.id.iv3)
+    ImageView iv3;
+    @BindView(R.id.tx4)
+    DocumentView tx4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +41,14 @@ public class OurDepartment extends AppCompatActivity {
         //TextView tv = (TextView) findViewById(R.id.textView2);
         //tv.setText(fromHtml(getString(R.string.OurDept)));
         Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/vision_mission.jpg").placeholder(R.drawable.dept).into(iv);
-        Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram/sites/ramapuram/files/images/about2_hd.jpg").placeholder(R.drawable.gallery).into(iv2);
-        tx2.setText(fromHtml(getString(R.string.OurVision)));
-        tx3.setText(fromHtml(getString(R.string.OurMission)));
+        Glide.with(this).load("http://www.srmuniv.ac.in/ramapuram-part-vadapalani/sites/vadapalani/files/images/iste_vdp_banner.jpg").placeholder(R.drawable.gallery).into(iv2);
+        Glide.with(this).load("http://i.imgur.com/Wp9rtHd.jpg").placeholder(R.drawable.gallery).into(iv3);
+
+        tx2.setText(fromHtml(getString(R.string.Abtdept)));
+        tx3.setText(fromHtml(getString(R.string.Faculties)));
         tx0.setText(fromHtml(getString(R.string.OurDept)));
+        tx4.setText(fromHtml(getString(R.string.lab)));
+
     }
 
     @SuppressWarnings("deprecation")

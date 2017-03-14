@@ -16,34 +16,53 @@
 ]]>
 
     </string>
-    <string name="OurVision"><![CDATA[
+    <string name="Abtdept"><![CDATA[
 <html>
   <head>
    </head>
 <body style=\"text-align:justify;color:gray;background-color:black;\">
 
-        <b>Our Vision</b>
+        <b>About the department:</b>
 
-       <p> To offer up to date and flexible programs that will enable our graduates to be competitive in the job market. We strive to provide a hands-on approach in teaching computer related courses. And to this end, we are increasing the capacity of our computer laboratories as well as equipping them with the latest in hardware and software.</p>
+       <p>
+     The department of Computer Science and Engineering, Ramapuram has been flourishing since 2004. The department’s mission is to advance, evolve, and enhance computer science and fundamentals to build the intellectual capital of research and students. Incredible amenities for imparting training courses to engineering, students, community, etc. We strive for caliber in research, knowledge dissemination and societal transformation. We facilitate students with Wi-Fi and smart class rooms.
+</p>
 
      </body>
 </html>
 ]]>
 
     </string>
-    <string name="OurMission"><![CDATA[
+    <string name="Faculties"><![CDATA[
 <html>
   <head>
    </head>
 <body style=\"text-align:justify;color:gray;background-color:black;\">
 
-<b>Our Mission</b>
+<b>Faculties:</b>
 
-      <p>  To provide outstanding education and research training to our students - for productive careers in industry, academia, and the government. We strive for excellence in research, teaching and service, covering the fundamental as well as applied aspects of computer science. Our efforts include:</p>
- <p>   Establishing nationally and internationally recognized research programs, including those of interdisciplinary nature.
-        Helping our students to develop the skills involved in solving complex technological problems of modern society.
-        Providing a framework for promoting collaborative and multidisciplinary activities.
-        At SRM University, the teaching environment is one that emphasizes depth, originality and critical thinking. The department also promotes innovative research and education programs in core computer science as well as multidisciplinary application areas. Upon graduation, our students will be able to perform research in all branches of the computing field.</p>
+      <p>
+     The Department has well- proficient and experienced faculty members with the best available exposure to the ever embryonic horizon of computer field and their research work extends to publish in many reputed International Journals. The faculty members are expert in the areas of Data Mining and Warehousing, Network Security, Artificial Intelligence, Cloud Computing, Image Processing, Natural Language Processing, etc.
+</p>
+
+     </body>
+</html>
+]]>
+
+    </string>
+    <string name="lab"><![CDATA[
+<html>
+  <head>
+   </head>
+<body style=\"text-align:justify;color:gray;background-color:black;\">
+
+<b>Laboratories:</b>
+
+      <p>
+
+     The Department has top-notched laboratories catering the needs of students. It provides a spectacular approach in various programming languages and enables to apply knowledge in latest Computer Technologies such as Mobile App Development, Robotics, Ethical hacking, Big data, High Speed Networks, Artificial Intelligence, Compiler Design.
+
+</p>
 
      </body>
 </html>

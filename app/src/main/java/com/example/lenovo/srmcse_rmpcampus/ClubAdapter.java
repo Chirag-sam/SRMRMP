@@ -51,7 +51,12 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ClubHolder> {
     @Override
     public void onBindViewHolder(ClubHolder holder, int position) {
         final Club c=list.get(position);
+        if (c.getImageurl()!=null)
         Glide.with(mContext).load(c.getImageurl()).centerCrop().placeholder(R.drawable.club).into(holder.iv);
+        else {
+            holder.iv.setPadding(10,10,10,10);
+            holder.iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            holder.iv.setImageResource(R.drawable.ic_cup);}
         holder.tv.setText(c.getTitle());
         holder.tv2.setText(c.getDescription());
         holder.cv.setOnClickListener(new View.OnClickListener() {

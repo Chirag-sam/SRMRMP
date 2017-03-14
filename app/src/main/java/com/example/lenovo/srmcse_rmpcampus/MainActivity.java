@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
-    private String text[]={"Sample Text1","Sample Text2","Sample Text3","Sample Text4","Sample Text5"};
+    private String text[]={"Welcome to Department of CSE, SRM UNIVERSITY, Ramapuram campus","100 Percent Placement for Successive 3 years","Top-Notched Laboratories","14 Clubs to enrich students minds","Follows Discipline is the first step to success"};
     int currentPage = 0;
     Timer timer;
     private  int[] Imageid={
-            R.drawable.dept,
             R.drawable.gallery,
-            R.drawable.club,
             R.drawable.place,
+            R.drawable.dept,
+            R.drawable.club,
             R.drawable.rules
 
 
@@ -118,11 +118,11 @@ public class MainActivity extends AppCompatActivity
                 else if (i==1)
                     startActivity(new Intent(MainActivity.this,ClubsActivity.class));
 
-               else if (i==5)
+               else if (i==4)
                     startActivity(new Intent(MainActivity.this,staff.class));
                 else if (i==2)
                     startActivity(new Intent(MainActivity.this,WorkShopActivity.class));
-                else if (i==6)
+                else if (i==5)
                 {
                     startActivity(new Intent(MainActivity.this,Achievements.class));
                 }

@@ -24,7 +24,6 @@ public class GridAdapter extends BaseAdapter {
             "Clubs",
             "Events",
             "Placements",
-            "Academics",
             "Staff",
             "Achievements"
 
@@ -35,7 +34,7 @@ public class GridAdapter extends BaseAdapter {
             R.drawable.club,
             R.drawable.club,
             R.drawable.place,
-            R.drawable.rules,
+
             R.drawable.tea,
             R.drawable.place
 

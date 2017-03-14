@@ -81,7 +81,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:id="@+id/iv"
-                android:src="@drawable/dept"
                 android:scaleType="fitXY"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
@@ -125,7 +124,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:id="@+id/iv2"
-                android:src="@drawable/dept"
                 android:scaleType="fitXY"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
@@ -140,6 +138,49 @@
                 ext:documentView_textFormat="formatted"
                 android:layout_below="@+id/iv2"
                 android:id="@+id/tx3"
+                ext:documentView_insetPaddingLeft="10dp"
+                ext:documentView_insetPaddingRight="10dp"
+                />
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="2dp"
+
+        android:clickable="false"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+
+        android:id="@+id/cv3">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:id="@+id/iv3"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                />
+            <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ext:documentView_antialias="true"
+                ext:documentView_cacheConfig="auto_quality"
+                ext:documentView_textAlignment="justified"
+                ext:documentView_textFormat="formatted"
+                android:layout_below="@+id/iv3"
+                android:id="@+id/tx4"
                 ext:documentView_insetPaddingLeft="10dp"
                 ext:documentView_insetPaddingRight="10dp"
                 />
