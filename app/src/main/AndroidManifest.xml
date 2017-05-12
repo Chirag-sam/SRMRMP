@@ -21,11 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".staff" />
-        <activity
-            android:name=".OurDepartment"
-            android:theme="@style/AppTheme" />
+        <activity android:name=".OurDepartment"  android:theme="@style/AppTheme" />
         <activity android:name=".ClubsActivity" />
         <activity android:name=".WorkShopActivity" />
+        <activity android:name=".PlacementActivity" />
         <activity android:name=".Achievements"></activity>
     </application>
 

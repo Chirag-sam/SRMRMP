@@ -1,11 +1,14 @@
 package com.example.lenovo.srmcse_rmpcampus;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -35,16 +38,15 @@ public class MainActivity extends AppCompatActivity
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
-    private String text[]={"Welcome to Department of CSE, SRM UNIVERSITY, Ramapuram campus","100 Percent Placement for Successive 3 years","Top-Notched Laboratories","14 Clubs to enrich students minds","Follows Discipline is the first step to success"};
+    private String text[]={"","100 Percent Placement for Successive 4 years","Top-Notched Laboratories","14 Clubs to enrich students minds","Follows- Discipline is the first step to success"};
     int currentPage = 0;
     Timer timer;
     private  int[] Imageid={
-            R.drawable.gallery,
+            R.drawable.gallery2,
+            R.drawable.labs,
             R.drawable.place,
-            R.drawable.dept,
             R.drawable.club,
-            R.drawable.rules
-
+            R.drawable.place
 
 
     };
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
@@ -122,6 +125,8 @@ public class MainActivity extends AppCompatActivity
                     startActivity(new Intent(MainActivity.this,staff.class));
                 else if (i==2)
                     startActivity(new Intent(MainActivity.this,WorkShopActivity.class));
+                else if(i==3)
+                    startActivity(new Intent(MainActivity.this,PlacementActivity.class));
                 else if (i==5)
                 {
                     startActivity(new Intent(MainActivity.this,Achievements.class));
@@ -222,9 +227,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -235,20 +237,29 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_navigation_view) {
+        if (id == R.id.contactus) {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setMessage("Contact: 902348023482398 email: jnasf@m.com");
+            builder.setPositiveButton("Ok",null);
+            builder.show();
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_view) {
-
-        } else if (id == R.id.nav_view1) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.ourdept) {
+            startActivity(new Intent(MainActivity.this,OurDepartment.class));
+        } else if (id == R.id.clubs) {
+            startActivity(new Intent(MainActivity.this,ClubsActivity.class));
+        } else if (id == R.id.placements) {
+            startActivity(new Intent(MainActivity.this,PlacementActivity.class));
+        }
+        else if (id == R.id.events) {
+            startActivity(new Intent(MainActivity.this,WorkShopActivity.class));
+        }
+        else if (id == R.id.staff) {
+            startActivity(new Intent(MainActivity.this,staff.class));
+        }
+        else if (id == R.id.achievements) {
+            startActivity(new Intent(MainActivity.this,Achievements.class));
 
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

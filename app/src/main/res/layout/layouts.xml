@@ -4,7 +4,7 @@
     android:layout_height="wrap_content">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:id="@+id/iv"
         android:scaleType="fitXY"/>
     <TextView
@@ -14,7 +14,8 @@
         android:gravity="center"
         android:maxLines="2"
         android:textColor="@android:color/white"
-        android:layout_alignBottom="@+id/iv"
+
+                android:layout_alignBottom="@+id/iv"
         android:layout_marginBottom="40dp"
         />
 
